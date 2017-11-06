@@ -1,0 +1,147 @@
+@import url(base.css);
+html, body {
+  height: 100%; 
+  width: 100%;
+  font-size: 20px;
+  /* background: #ddd;  */
+}
+
+.wrap {
+  width: 61.975rem;
+  height: 87.7rem;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 5.1rem;
+  padding-left: 2.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
+
+header {
+  width: 57.2rem;
+  height: 6.725rem;
+  display: flex;
+  border-bottom: 6px solid #31affc;
+  margin-bottom: 1.425rem; }
+  header .lside {
+    width: 17.7rem;
+    color: #31affc; }
+    header .lside h1 {
+      line-height: 4.4rem;
+      font-size: 2.55rem;
+      color: #31affc; }
+  header .rside {
+    width: 29.0rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    header .rside p {
+      width: 50%;
+      height: 2.8rem;
+      line-height: 2.8rem;
+      font-size: 0.9rem;
+      color: #000; }
+      header .rside p span {
+        vertical-align: middle;
+        display: inline-block; }
+      header .rside p .age {
+        height: 0.9rem;
+        width: 0.7rem;
+        background: url(../img/age.png) no-repeat;
+        background-size: 100%;
+        margin-left: 0.1rem;
+        margin-right: 0.375rem; }
+      header .rside p .city {
+        height: 0.9rem;
+        width: 0.7rem;
+        background: url(../img/pos.png) no-repeat;
+        background-size: 100%;
+        margin-left: 0.1rem;
+        margin-right: 0.375rem; }
+      header .rside p .call {
+        height: 0.925rem;
+        width: 0.675rem;
+        background: url(../img/cal.png) no-repeat;
+        background-size: 100%;
+        margin-right: 0.475rem; }
+      header .rside p .email {
+        height: 0.875rem;
+        width: 0.9rem;
+        background: url(../img/email.png) no-repeat;
+        background-size: 100%;
+        margin-right: 0.325rem; }
+
+section {
+  width: 57.2rem;
+  height: 1.25rem; }
+  section .t1 {
+    height: 1.875rem;
+    line-height: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    color: #31affc; }
+    section .t1 b {
+      font-size: 1.3rem; }
+    section .t1 span {
+      display: inline-block;
+      border-radius: 50%;
+      height: 1.875rem;
+      width: 1.875rem;
+      background-size: 100%;
+      vertical-align: top;
+      margin-left: 4.125rem;
+      margin-right: 1.0rem; }
+    section .t1 i {
+      flex: 1;
+      display: inline-block;
+      height: 0.25rem;
+      line-height: 1.875rem;
+      background: #31affc;
+      margin-top: 0.825rem; }
+    section .t1 .me {
+      background: url(../img/me.png) 0.4rem 0.45rem no-repeat #31affc;
+      background-size: 1.05rem 1.05rem; }
+    section .t1 .job {
+      background: url(../img/job.png) 0.4rem 0.45rem no-repeat #31affc;
+      background-size: 1.05rem 1.05rem; }
+    section .t1 .pro {
+      background: url(../img/pro.png) 0.25rem 0.45rem no-repeat #31affc;
+      background-size: 1.425rem 1.05rem; }
+    section .t1 .show {
+      background: url(../img/show.png) 0.25rem 0.45rem no-repeat #31affc;
+      background-size: 1.425rem 1.05rem; }
+  section .list {
+    margin-left: 10.3rem;
+    border-left: 0.125rem dotted #5496fc;
+    padding-left: 2.675rem;
+    color: #333; }
+    section .list li {
+      line-height: 1.4rem;
+      list-style: outside; }
+    section .list .off {
+      list-style: none; }
+  section .t2 {
+    margin: 20px 0;
+    height: 0.925rem;
+    line-height: 0.925rem; }
+    section .t2 b {
+      display: inline-block;
+      width: 10.925rem;
+      background: url(../img/cur.png) no-repeat 9.875rem 0rem;
+      background-size: 0.925rem 0.95rem;
+      height: 0.925rem;
+      font-size: 0.95rem;
+      color: #000;
+      margin-right: 0.65rem; }
+    section .t2 em {
+      display: inline-block;
+      width: 10.925rem;
+      height: 0.925rem;
+      margin-right: 0.65rem; }
+    section .t2 span {
+      display: inline-block;
+      height: 0.925rem;
+      width: 26.675rem;
+      font-size: 0.95rem;
+      color: #000; }
