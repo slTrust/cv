@@ -14,10 +14,30 @@
             vertical-align: -0.15em;
             fill: currentColor;
             overflow: hidden;
-            }
+        }
+        .site-welcome{
+            display: none;
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: #888;
+            z-index: 1;
+            
+        }
+        .site-welcome.active{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
     </style>
 </head>
 <body>
+    <div class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <div class="topNavBar">
         <div class="topNavBar-inner clearfix">
             <a class="logo" alt="logo" href="javascript:;" style="float:left;">
@@ -175,7 +195,7 @@
             </div>
         </div>
     </section>
-    <div class="loading"></div>
+    
 
 
     <script>
