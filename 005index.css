@@ -15,6 +15,7 @@ a{ color:inherit;text-decoration: none;}
 .topNavBar .logo{font-size: 24px;font-family: "Arial Black";padding-top:3px;padding-bottom:4px;}
 .topNavBar .logo .rs{margin-right:4px;color:#e66666;}
 .topNavBar .logo .card{color:#9a9da2;}
+
 .banner{height:515px;background:url(img/rs-cover.jpg);background-position:center center;background-size:cover;}
 .banner .mask{height:515px;background-color:rgba(0,0,0,0.8);}
 
