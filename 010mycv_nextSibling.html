@@ -263,13 +263,20 @@
                 // **解决方案用  递归 判断下一个兄弟的节点类型   node.nodeType  1代表元素节点 3代表文字节点
                 //寻找a的节点弟弟  而不是  文本弟弟
                 let brother = a.nextSibling;
-                while(brother.nodeType === 3){
+                // 定向寻找ul标签
+                while(brother.tagName !== 'UL'){
                     brother = brother.nextSibling;
                 }
                 console.log(brother)
-
+                brother.classList.add('active');
             }
             aTags[i].onmouseleave = function(e){
+                let a = e.currentTarget;
+                let brother = a.nextSibling;
+                while(brother.tagName !== 'UL'){
+                    brother = brother.nextSibling;
+                }
+                brother.classList.remove('active');
             }
         }
     </script>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./009main.css">
+    <link rel="stylesheet" href="./011main.css">
     <script src="//at.alicdn.com/t/font_457390_3jk7kayoo4ezsemi.js"></script>
     <style>
         .icon{
@@ -55,16 +55,16 @@
                     <li>
                         <a href="#">技能</a>
                     </li>
-                    <li>
-                        <a class="menuTigger" href="#">作品</a>
+                    <li class="menuTigger">
+                        <a href="#">作品</a>
                         <ul class="submenu">
                             <li>作品1</li>
                             <li>作品2</li>
                             <li>作品3</li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="menuTigger" href="#">博客</a>
+                    <li class="menuTigger">
+                        <a href="#">博客</a>
                         <ul class="submenu">
                                 <li>博客1</li>
                                 <li>博客2</li>
@@ -248,28 +248,18 @@
             }
         }
 
-        let aTags = document.getElementsByClassName('menuTigger');
+        let liTags = document.getElementsByClassName('menuTigger');
         //监听含有子菜单的topNavBar menu
-        for(let i=0;i<aTags.length;i++){
-            aTags[i].onmouseenter = function(e){
-                // 操作的元素  如果是click  a里面是span就会是 span
-                // console.log(e.target)
-                //监听的元素  如果是click  a里面是span这里是监听的元素 就是a
-                // console.log(e.currentTarget)
-                let a = e.currentTarget;
-                // a.nextSibling是文本节点  因为a与ul之间有 回车
-                // console.log(a.nextSibling)
-                // a.nextSibling.nextSibling  才是 ul
-                // **解决方案用  递归 判断下一个兄弟的节点类型   node.nodeType  1代表元素节点 3代表文字节点
-                //寻找a的节点弟弟  而不是  文本弟弟
-                let brother = a.nextSibling;
-                while(brother.nodeType === 3){
-                    brother = brother.nextSibling;
-                }
-                console.log(brother)
-
+        for(let i=0;i<liTags.length;i++){
+            liTags[i].onmouseenter = function(e){
+                let li = e.currentTarget;
+                let brother = li.getElementsByTagName('ul')[0];
+                brother.classList.add('active');
             }
-            aTags[i].onmouseleave = function(e){
+            liTags[i].onmouseleave = function(e){
+                let li = e.currentTarget;
+                let brother = li.getElementsByTagName('ul')[0];
+                brother.classList.remove('active');
             }
         }
     </script>
