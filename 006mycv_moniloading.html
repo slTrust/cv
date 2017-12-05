@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./005main.css">
+    <script src="//at.alicdn.com/t/font_457390_3jk7kayoo4ezsemi.js"></script>
+    <style>
+        .icon{
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .site-welcome{
+            display: none;
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: #888;
+            z-index: 1;
+            
+        }
+        .site-welcome.active{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* loading */
+        .loading{height: 200px;width: 200px;position:relative;}
+        .loading::before,.loading::after{content:'';position: absolute;width: 0;height: 0;background: black;border-radius: 50%;top:0;left:0;right:0;bottom:0;margin:auto;animation: s 1.5s linear infinite;}
+        .loading::after{animation-delay: 0.75s;}
+        @keyframes s{0%{width: 0;height: 0;opacity: 1;}100%{width: 100px;height: 100px;opacity: 0;}}
+        
+    </style>
+</head>
+<body>
+    <div class="site-welcome active" id="siteWelcome">
+        <div class="loading"></div>
+    </div>
+    <div class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a class="logo" alt="logo" href="javascript:;" style="float:left;">
+            <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav style="float:right;">
+                <ul class="clearfix" >
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SKILLS</a></li>
+                    <li><a href="#">EXPERIENCE</a></li>
+                    <li><a href="#">PRICING</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CALENDAR</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">OTHER</a></li>
+                    <li><a href="#">ALL DEMOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+
+    <!-- 主要部分 -->
+    <main>
+        <div class="userCard">
+            <div class="pictureAndText clearfix" >
+                <div class="picture">
+                    <img src="./img/avatar.jpg" height=347 width=299 alt="头像">
+                </div>
+                <div class="text">
+                    <div class="profile">
+                        <span class="welcome">
+                            Hello
+                            <span class="triangle"></span>
+                        </span>
+                        <h1>黄家玺</h1>
+                        <p>前端开发工程师</p>
+                        <hr>
+                        <!-- description list -->
+                        <dl>
+                            <!-- description term 单词-->
+                            <!-- description definition定义 -->
+                            <dt>年龄</dt>
+                            <dd>25</dd>
+                            <dt>所在城市</dt>
+                            <dd>北京</dd>
+                            <dt>邮箱</dt>
+                            <dd>trustfor@sina.cn</dd>
+                            <dt>手机</dt>
+                            <dd>15332136875</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <footer class="media">
+                <!-- a[href=#]*7>img[src=#][alt="..."]   -->
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jirengulogozaoqi"></use>
+                    </svg>
+                </a>
+            </footer>   
+        </div>
+        <!-- 下载地址 -->
+        <p class="downloadResume-wrapper">
+            <a href="./cv.png" target="_blank" class="downloadResume" download>下载 PDF 简历</a>
+        </p>
+        <!-- 介绍 -->
+        <p class="selfIntroduction">
+            黄家玺,前端开发工程师,目前在xx公司从事前端开发。<br>
+            技能：HTML、CSS、JavaScript、jQuery、Vue、React、NodeJs、
+        </p>
+    </main>
+    <!-- 技能 -->
+    <section class="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li> <h3>HTML5 &amp; CSS3</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:75%"></div>
+                </div>
+            </li>
+            <li> <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:78%"></div>
+                </div>
+            </li>
+            <li> <h3>jQuery</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:85%"></div>
+                </div>
+            </li>
+            <li> <h3>Vue</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:65%"></div>
+                </div>
+            </li>
+            <li> <h3>React</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:71%"></div>
+                </div>
+            </li>
+            <li> <h3>Http</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:60%"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section class="portfolio">
+        <h2>作品集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS &amp;CSS</li>
+            </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
+        </nav>
+        <div class="works" style="height:597px;">
+            <div class="big">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="small">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="small">
+                <img src="./images/3.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <script>
+        portfolio1.onclick = function(){
+            portfolioBar.className = 'bar state-1';
+        }
+        portfolio2.onclick = function(){
+            portfolioBar.className = 'bar state-2';
+        }
+        portfolio3.onclick = function(){
+            portfolioBar.className = 'bar state-3';
+        }
+    </script>
+    <script>
+        setTimeout(function(){
+            siteWelcome.classList.remove('active');
+        },1000)
+        
+    </script>
+</body>
+</html>
