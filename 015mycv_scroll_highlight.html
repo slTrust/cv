@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./011main.css">
+    <link rel="stylesheet" href="./015main.css">
     <!-- <script src="//at.alicdn.com/t/font_457390_3jk7kayoo4ezsemi.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
     <style>
@@ -91,7 +91,7 @@
 
     <!-- 主要部分 -->
     <main>
-        <div id="siteAbout" class="userCard">
+        <div id="siteAbout" data-x class="userCard">
             <div class="pictureAndText clearfix" >
                 <div class="picture">
                     <img src="./img/avatar.jpg" height=347 width=299 alt="头像">
@@ -161,7 +161,7 @@
         </p>
     </main>
     <!-- 技能 -->
-    <section id="siteSkills" class="skills">
+    <section id="siteSkills" data-x class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li> <h3>HTML5 &amp; CSS3</h3>
@@ -197,7 +197,7 @@
         </ol>
     </section>
 
-    <section id="siteWorks" class="portfolio">
+    <section id="siteWorks" data-x class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -247,6 +247,23 @@
             }else{
                 topNavBar.classList.remove('sticky');
             }
+
+            //滚动到对应位置  高亮对应标签      
+            let specialTags = document.querySelectorAll('[data-x]');
+            //找到现在位置距离顶部最近的那个
+            let minIndex = 0; 
+            for(let i=1;i<specialTags.length;i++){
+                //console.log(specialTags[i].offsetTop)
+                if(Math.abs(specialTags[i].offsetTop -window.scrollY) < Math.abs(specialTags[minIndex].offsetTop -window.scrollY)){
+                    minIndex = i;
+                }
+            }
+            //清除当前的样式
+            for(let i=0;i<specialTags.length;i++){
+                specialTags[i].classList.remove('active');
+            }
+            //选中当前最近的模块
+            specialTags[minIndex].classList.add('active');
         }
         //这样找只有子菜单的li有 边框效果  ==》找所有li
         // let liTags = document.getElementsByClassName('menuTigger');
