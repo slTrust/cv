@@ -274,7 +274,9 @@
                 aLi[i].classList.remove('active');
             }
             li.classList.add('active');
-            //此时已经有bug了  移动到技能时候 虽然选中了  但是他的列表出现了
+            //此时已经有bug了  
+            //  当前位置高亮了 但是 鼠标移入移出后  就不高亮了  因为移入移出和 滚动都是操作一个active
+            //滚动到技能时候 虽然选中了  但是他的列表出现了
         }
         //这样找只有子菜单的li有 边框效果  ==》找所有li
         // let liTags = document.getElementsByClassName('menuTigger');
