@@ -264,6 +264,17 @@
             }
             //选中当前最近的模块
             specialTags[minIndex].classList.add('active');
+            //选中当前模块对应的a标签
+            let id = specialTags[minIndex].id;
+            let aTag = document.querySelector('a[href="#'+id+'"]');
+            //找到aTag的爸爸 就是 li 给它加 active 同时去除其他li的active
+            let li = aTag.parentNode;
+            let aLi = li.parentNode.children;
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].classList.remove('active');
+            }
+            li.classList.add('active');
+            //此时已经有bug了  移动到技能时候 虽然选中了  但是他的列表出现了
         }
         //这样找只有子菜单的li有 边框效果  ==》找所有li
         // let liTags = document.getElementsByClassName('menuTigger');
