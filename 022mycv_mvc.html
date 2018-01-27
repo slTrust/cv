@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+    <link rel="stylesheet" href="./022main.css">
+</head>
+<body>
+    <div class="site-welcome active" id="siteWelcome">
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+            <a class="logo" alt="logo" href="javascript:;" style="float:left;">
+            <span class="rs">RS</span><span class="card">card</span>
+            </a>
+            <nav class="menu" style="float:right;">
+                <ul class="clearfix" >
+                    <li>
+                        <a href="#siteAbout">关于</a>
+                    </li>
+                    <li>
+                        <a href="#siteSkills">技能</a>
+                    </li>
+                    <li>
+                        <a href="#siteWorks">作品</a>
+                        <ul class="submenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">博客</a>
+                        <ul class="submenu">
+                                <li>博客1</li>
+                                <li>博客2</li>
+                                <li>博客3</li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#">日历</a>
+                    </li>
+                    <li>
+                        <a href="#">联系方式</a></li>
+                    <li>
+                        <a href="#">其他</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+
+    <!-- 主要部分 -->
+    <main>
+        <div id="siteAbout" data-x class="userCard">
+            <div class="pictureAndText clearfix" >
+                <div class="picture">
+                    <img src="./img/avatar.jpg" height=347 width=299 alt="头像">
+                </div>
+                <div class="text">
+                    <div class="profile">
+                        <span class="welcome">
+                            Hello
+                            <span class="triangle"></span>
+                        </span>
+                        <h1>黄家玺</h1>
+                        <p>前端开发工程师</p>
+                        <hr>
+                        <!-- description list -->
+                        <dl>
+                            <!-- description term 单词-->
+                            <!-- description definition定义 -->
+                            <dt>年龄</dt>
+                            <dd>25</dd>
+                            <dt>所在城市</dt>
+                            <dd>北京</dd>
+                            <dt>邮箱</dt>
+                            <dd>trustfor@sina.cn</dd>
+                            <dt>手机</dt>
+                            <dd>15332136875</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <footer class="media">
+                <!-- a[href=#]*7>img[src=#][alt="..."]   -->
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jirengulogozaoqi"></use>
+                    </svg>
+                </a>
+            </footer>   
+        </div>
+        <!-- 下载地址 -->
+        <p class="downloadResume-wrapper">
+            <a href="./cv.png" target="_blank" class="downloadResume" download>下载 PDF 简历</a>
+        </p>
+        <!-- 介绍 -->
+        <p class="selfIntroduction">
+            黄家玺,前端开发工程师,目前在xx公司从事前端开发。<br>
+            技能：HTML、CSS、JavaScript、jQuery、Vue、React、NodeJs、
+        </p>
+    </main>
+    <!-- 技能 -->
+    <section id="siteSkills" data-x class="skills">
+        <h2>技能</h2>
+        <ol class="clearfix">
+            <li> <h3>HTML5 &amp; CSS3</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:75%"></div>
+                </div>
+            </li>
+            <li> <h3>JavaScript</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:78%"></div>
+                </div>
+            </li>
+            <li> <h3>jQuery</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:85%"></div>
+                </div>
+            </li>
+            <li> <h3>Vue</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:65%"></div>
+                </div>
+            </li>
+            <li> <h3>React</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:71%"></div>
+                </div>
+            </li>
+            <li> <h3>Http</h3>
+                <div class="progressBar">
+                    <div class="progress" style="width:60%"></div>
+                </div>
+            </li>
+        </ol>
+    </section>
+
+    <section id="siteWorks" data-x class="portfolio">
+        <h2>作品集</h2>
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <img src="./images/nav-page.jpg" class="swiper-slide" alt="">
+                <img src="./images/canvas.png" class="swiper-slide" alt="">
+                <img src="./images/slides.png" class="swiper-slide" alt="">
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="./js2/init-swiper.js"></script>
+    <script src="./js2/auto-slide-up.js"></script>
+    <script src="./js2/sticky-topbar.js"></script>
+    <script src="./js2/smoothly-navigation.js"></script>
+    <script>
+        siteWelcome.classList.remove('active');
+    </script>
+</body>
+</html>
