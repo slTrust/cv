@@ -15,11 +15,42 @@ myForm.addEventListener('submit',function(e){
     var message = new Message();
     message.save({
         'content':content,
-    }).then(function(object) {
-        alert('存入成功')
-        console.log(object)
     })
+    .then(
+        function(object) {
+            window.location.reload()
+            console.log(object)
+        },
+        function(err){
+            alert('提交失败，请改天再来留言')
+        }
+    )
 })
+
+var query = new AV.Query('Message');
+query.find()
+.then(
+    function (msgs) {
+    // 更新成功
+    let array = msgs.map((item)=> item.attributes )
+    array.forEach((item)=>{
+        let li = document.createElement('li');
+        li.innerText = item.content;
+        let messageList = document.querySelector('#messageList');
+        messageList.appendChild(li);
+    })
+    },
+    function(error){
+    //异常处理
+    })
+.then(function(msgs) {
+    console.log(1)
+    console.log(msgs)
+}, function (error) {
+    // 异常处理
+    console.log(2)
+    console.log(error)
+});
 
 // var hjx = AV.Object.extend('Hjx');
 // var obj = new hjx();
