@@ -11,6 +11,7 @@
             this.form = view.querySelector('form');
             this.initAV();
             this.loadMessage();
+            this.bindEvents()
         },
         initAV:function(){
             var APP_ID = 'fqJwht8RtYXK5nVQ1uaDjUc5-gzGzoHsz';
